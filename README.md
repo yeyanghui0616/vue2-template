@@ -1,4 +1,9 @@
-# vue2-template
+# vue2-admin-template
+
+## Node
+```
+v14.17.0
+```
 
 ## Project setup
 ```
