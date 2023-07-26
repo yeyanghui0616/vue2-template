@@ -74,6 +74,8 @@ export const routes = [
 			},
 		],
 	},
+	// 404 要放在最后
+	{ path: '*', redirect: '/404', hidden: true }
 ];
 
 const router = new VueRouter({

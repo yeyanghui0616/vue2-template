@@ -7,7 +7,7 @@
           <h1 class="mb-2 text-2xl">Instagram</h1>
           <span class="text-gray-300">Enter Login Details</span>
         </div>
-        <form action="#" @submit="login()">
+        <form action="#">
           <div class="mb-4 text-lg">
             <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="name" placeholder="id@email.com" />
           </div>
@@ -16,7 +16,7 @@
             <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
           </div>
           <div class="mt-8 flex justify-center text-lg text-black">
-            <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
+            <button @click="login()" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
           </div>
         </form>
       </div>
@@ -33,7 +33,7 @@
   
     methods: {
       login(){
-        alert('1')
+        this.$router.push('/')
       }
     },
   };

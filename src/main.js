@@ -10,6 +10,9 @@ import "./assets/tailwindcss.css"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// 引入权限控制文件
+import '@/utils/permission'
+
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false

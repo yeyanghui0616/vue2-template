@@ -12,7 +12,7 @@
 				:key="tab.fullPath"
 				:label="tab.meta.title"
 				:name="tab.fullPath"
-				>用户管理</el-tab-pane
+				></el-tab-pane
 			>
 		</el-tabs>
 	</div>
@@ -57,7 +57,6 @@ export default {
             }
             this.tabActive = to.fullPath
             localStorage.setItem('tabActive', this.tabActive)
-            console.log('this.tabSelection :>> ', Array.isArray(this.tabSelection));
             localStorage.setItem('tabSelection', JSON.stringify(this.tabSelection))
         },
         removeTab(tabName){

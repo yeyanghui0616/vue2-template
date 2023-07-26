@@ -19,7 +19,6 @@ export default {
 				(route) =>
 					route.path === '/' + this.$route.fullPath.split('/')[1]
 			);
-			console.log('result.children :>> ', result.children);
 			return result.children;
 		},
 	},
