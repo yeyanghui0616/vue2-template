@@ -1,9 +1,14 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <div style="height: calc(100vh - 60px)" class="bg-purple-600 flex">
+        <div style="height: calc(100vh - 60px)" class="flex">
             <SideBar style="width:240px"></SideBar>
-            <router-view></router-view>
+            <div class="flex-1 flex flex-col">
+                <Tag style="height: 40px;"></Tag>
+                <div class="bg-gray-50 flex-1 p-4 flex">
+                    <router-view class="bg-white flex-1 rounded-lg p-2"></router-view>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -11,10 +16,12 @@
 <script>
 import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
+import Tag from './components/Tag'
 export default {
     components:{
         Navbar,
-        SideBar
+        SideBar,
+        Tag
     },
     data() {
         return {

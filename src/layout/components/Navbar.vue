@@ -1,46 +1,26 @@
 <template>
-	<div style="height: 60px" class="bg-gray-500 flex">
+	<div style="height: 60px" class="flex bg-blue-500">
 		<Logo></Logo>
-		<div class="flex-1">
-			<el-menu
-				:default-active="activeIndex"
-				mode="horizontal"
-				@select="handleSelect"
-                router
-			>
-				<el-menu-item  v-for="item in firstRoutes" :index="item.path">{{item.meta.title}}</el-menu-item>
-			</el-menu>
-		</div>
-		<div class="bg-white w-80">control</div>
+		<TopBar></TopBar>
+		<Avator></Avator>
 	</div>
 </template>
 
 <script>
-import { routes } from '@/router'
-import Logo from './Logo';
-
+import Logo from './Logo.vue';
+import TopBar from './TopBar.vue'
+import Avator from './Avator.vue'
 export default {
 	components: {
 		Logo,
+		TopBar,
+		Avator
 	},
-    computed:{
-        firstRoutes:function(){
-            return routes.filter(route=>!route.hidden)
-        },
-        activeIndex:function(){
-            return '/' + this.$route.fullPath.split('/')[1]
-        }
-    },
 	data() {
-		return {
-		};
+		return {};
 	},
 
-	methods: {
-		handleSelect(key, keyPath) {
-			console.log(key, keyPath);
-		},
-	},
+	methods: {},
 };
 </script>
 
