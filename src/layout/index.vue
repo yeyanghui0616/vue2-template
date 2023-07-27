@@ -3,10 +3,10 @@
         <Navbar></Navbar>
         <div style="height: calc(100vh - 60px)" class="flex">
             <SideBar style="width:240px"></SideBar>
-            <div class="flex-1 flex flex-col">
-                <Tag style="height: 40px;"></Tag>
-                <div class="bg-gray-50 flex-1 p-4 flex">
-                    <router-view class="bg-white flex-1 rounded-lg p-2 shadow-sm"></router-view>
+            <div class="flex flex-col" :style="{'width': mainWidth}">
+                <Tag style="height: 40px;width:100%"></Tag>
+                <div class="bg-gray-50 flex-1 p-4 flex w-full">
+                    <router-view class="bg-white flex-1 rounded-lg p-3 shadow-sm w-full"></router-view>
                 </div>
             </div>
         </div>
@@ -25,7 +25,13 @@ export default {
     },
     data() {
         return {
+            mainWidth:(document.documentElement.clientWidth - 240) + 'px'
         };
+    },
+    mounted(){
+        window.onresize = ()=>{
+            this.mainWidth = (document.documentElement.clientWidth - 240) + 'px'
+        }
     },
 
     methods: {
