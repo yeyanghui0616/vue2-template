@@ -6,7 +6,7 @@
             <div class="flex-1 flex flex-col">
                 <Tag style="height: 40px;"></Tag>
                 <div class="bg-gray-50 flex-1 p-4 flex">
-                    <router-view class="bg-white flex-1 rounded-lg p-2"></router-view>
+                    <router-view class="bg-white flex-1 rounded-lg p-2 shadow-sm"></router-view>
                 </div>
             </div>
         </div>

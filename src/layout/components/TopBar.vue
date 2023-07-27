@@ -32,7 +32,7 @@ export default {
 .topbar{
     ::v-deep{
         .el-menu{
-            background-color: #3b82f6;
+            background-color: #2357e9;
         }
         .el-menu.el-menu--horizontal{
             border-bottom: 0;

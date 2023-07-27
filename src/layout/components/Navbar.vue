@@ -1,5 +1,5 @@
 <template>
-	<div style="height: 60px" class="flex bg-blue-500">
+	<div style="height: 60px;background-color: #2357e9;" class="flex">
 		<Logo></Logo>
 		<TopBar></TopBar>
 		<Avator></Avator>
