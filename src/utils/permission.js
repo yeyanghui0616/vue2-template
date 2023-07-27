@@ -1,7 +1,8 @@
 import router from '@/router'
 import NProgress from 'nprogress' // 进度条
 import 'nprogress/nprogress.css' // 进度条样式
-import getPageTitle from '@/utils/getPageTitle' 
+import getPageTitle from '@/utils/getPageTitle'
+import { isLogin } from '@/utils/userInfo'
 
 NProgress.configure({ showSpinner: false }) // 进度条配置
 
@@ -14,9 +15,7 @@ router.beforeEach((to, from, next) => {
     // 设置页面标题
     document.title = getPageTitle(to.meta.title)
 
-    const hasToken = true
-
-    if (hasToken) {
+    if (isLogin()) {
         if (to.path === '/login') {
             // 如果要去登陆页面，就放行
             next({ path: '/' })

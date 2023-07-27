@@ -34,6 +34,7 @@ export default {
 				type: 'warning',
 			})
 				.then(() => {
+					sessionStorage.clear();
 					this.$router.push('/login');
 				})
 				.catch(() => {
