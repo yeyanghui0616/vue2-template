@@ -115,18 +115,17 @@
 					</template>
 				</el-table-column>
 			</el-table>
-			<div class="flex justify-center items-center py-3 h-10 mt-2">
-				
-			<el-pagination
-				@size-change="handleSizeChange"
-				@current-change="handleCurrentChange"
-				:current-page="currentPage"
-				:page-sizes="[100, 200, 300, 400]"
-				:page-size="100"
-				layout="total, sizes, prev, pager, next, jumper"
-				:total="400"
-			>
-			</el-pagination>
+			<div class="flex flex-row-reverse items-center py-3 h-10 mt-2">
+				<el-pagination
+					@size-change="handleSizeChange"
+					@current-change="handleCurrentChange"
+					:current-page="currentPage"
+					:page-sizes="[100, 200, 300, 400]"
+					:page-size="100"
+					layout="total, sizes, prev, pager, next, jumper"
+					:total="400"
+				>
+				</el-pagination>
 			</div>
 		</div>
 	</div>
