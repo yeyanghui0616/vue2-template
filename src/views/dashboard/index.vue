@@ -23,12 +23,13 @@
 			</div>
 		</div>
 		<div class="py-3 form h-15">
-			<el-form :inline="true" :model="formInline" class="ml-0 mr-auto">
+			<el-form :inline="true" :model="formInline" class="ml-0 mr-auto" label-suffix="：" >
 				<el-form-item label="审批人">
 					<el-input
 						v-model="formInline.user"
 						placeholder="审批人"
 						size="small"
+						suffix-icon="xxx"
 					></el-input>
 				</el-form-item>
 				<el-form-item label="活动区域">
